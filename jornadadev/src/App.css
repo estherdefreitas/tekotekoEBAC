@@ -1,8 +1,8 @@
 html{
   scroll-snap-type: y mandatory;
+  background-color: black;
 }
 .App{
-  background-color: black;
   height: 100vh;
   display: grid;
   place-items: center;
