@@ -1,2 +1,2 @@
 # TekoTeko project 
-(tekotekoEBAC)[https://tekotekoebac.web.app/]
+[tekotekoEBAC](https://tekotekoebac.web.app/)
