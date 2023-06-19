@@ -3,11 +3,13 @@
     width: 100%;
     scroll-snap-align: start;
     position: relative;
-    border-bottom: 2px solid hotpink;
+    border-bottom: 1px solid transparent;
+    
 }
 
 .video_player{
     height: 100%;
     width: 100%;
-    object-fit: fill;    
+    object-fit: fill;
+    border-radius: 8px;
 }

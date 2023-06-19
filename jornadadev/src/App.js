@@ -5,6 +5,15 @@ import db from "./config/firebase"
 import { collection, getDocs } from 'firebase/firestore/lite';
 
 function App() {
+  
+  function maxHeight(){
+    if(window.innerHeight <= 800){
+      return window.innerHeight;
+    } else{
+      return 800;
+    }
+  }
+  
 
   const [videos, setVideos] = useState([])
 
@@ -21,22 +30,23 @@ function App() {
 
 
   return (
-    <div className='App'>
-      <h1>Tekoteko</h1>
-        <div className='app_videos'>
-          { videos.map((item) => {
-            return(
-              <Video
-                likes={item.likes}
-                messages={item.messages}
-                shares={item.shares}
-                name={item.name}
-                description={item.description}
-                music={item.music}
-                url={item.url}
-              />
-            )
-          }) }
+    <div className='App' style={{maxHeight: maxHeight + "px"}}>
+        <div className="gradient-border">
+          <div className='app_videos'>
+            { videos.map((item) => {
+              return(
+                <Video
+                  likes={item.likes}
+                  messages={item.messages}
+                  shares={item.shares}
+                  name={item.name}
+                  description={item.description}
+                  music={item.music}
+                  url={item.url}
+                />
+                )
+            }) }
+          </div>
         </div>
     </div>
   );
